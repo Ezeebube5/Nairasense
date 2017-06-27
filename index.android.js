@@ -1,5 +1,5 @@
-import './App/Config/ReactotronConfig'
-import { AppRegistry } from 'react-native'
-import App from './App/Containers/App'
+import { AppRegistry } from 'react-native';
+import './src/Config/ReactotronConfig';
+import App from './src/Containers/App';
 
-AppRegistry.registerComponent('IgniteExampleLogin', () => App)
+AppRegistry.registerComponent('IgniteExampleLogin', () => App);

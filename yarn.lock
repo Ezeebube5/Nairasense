@@ -664,7 +664,7 @@ babel-plugin-transform-es3-property-literals@^6.5.0, babel-plugin-transform-es3-
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-flow-strip-types@^6.21.0, babel-plugin-transform-flow-strip-types@^6.5.0, babel-plugin-transform-flow-strip-types@^6.7.0, babel-plugin-transform-flow-strip-types@^6.8.0:
+babel-plugin-transform-flow-strip-types@^6.21.0, babel-plugin-transform-flow-strip-types@^6.22.0, babel-plugin-transform-flow-strip-types@^6.5.0, babel-plugin-transform-flow-strip-types@^6.7.0, babel-plugin-transform-flow-strip-types@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-flow-strip-types/-/babel-plugin-transform-flow-strip-types-6.22.0.tgz#84cb672935d43714fdc32bce84568d87441cf7cf"
   dependencies:
@@ -1177,6 +1177,13 @@ cli-width@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
 
+"cli@>= 0.2.8":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cli/-/cli-1.0.1.tgz#22817534f24bfa4950c34d532d48ecbc621b8c14"
+  dependencies:
+    exit "0.1.2"
+    glob "^7.1.1"
+
 cliui@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
@@ -1208,6 +1215,10 @@ co@^4.6.0:
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
+
+coffee-script@>=1.2.0:
+  version "1.12.6"
+  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.6.tgz#285a3f7115689065064d6bf9ef4572db66695cbf"
 
 color-convert@^1.0.0, color-convert@^1.3.0:
   version "1.9.0"
@@ -1625,6 +1636,13 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
+"eco@>= 1.1.0-rc-3":
+  version "1.1.0-rc-3"
+  resolved "https://registry.yarnpkg.com/eco/-/eco-1.1.0-rc-3.tgz#742a32c4615af705ab3e9a46b6ce5c16dbc57262"
+  dependencies:
+    coffee-script ">=1.2.0"
+    strscan ">=1.0.1"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -2011,6 +2029,10 @@ exit-hook@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
+exit@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
+
 expand-brackets@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/expand-brackets/-/expand-brackets-0.1.5.tgz#df07284e342a807cd733ac5af72411e581d1177b"
@@ -2172,6 +2194,21 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+flow-bin@^0.48.0:
+  version "0.48.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.48.0.tgz#72d075143524358db8901525e3c784dc13a7c7ee"
+
+flow-remove-types@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-1.2.1.tgz#58e261bf8b842bd234c86cafb982a1213aff0edb"
+  dependencies:
+    babylon "^6.15.0"
+    vlq "^0.2.1"
+
+flow@0.6:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/flow/-/flow-0.2.3.tgz#f8da65efa249127ec99376a28896572a9795d1af"
 
 follow-redirects@1.0.0:
   version "1.0.0"
@@ -4967,6 +5004,10 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+strscan@>=1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/strscan/-/strscan-1.0.1.tgz#472d9bc00c68e906ef2fc22cdf762be7c61acc4d"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -5203,6 +5244,10 @@ vinyl@^0.5.0:
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
 
+vlq@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.2.tgz#e316d5257b40b86bb43cb8d5fea5d7f54d6b0ca1"
+
 walker@~1.0.5:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
@@ -5212,6 +5257,13 @@ walker@~1.0.5:
 watch@~0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/watch/-/watch-0.10.0.tgz#77798b2da0f9910d595f1ace5b0c2258521f21dc"
+
+watchman@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/watchman/-/watchman-0.1.8.tgz#78ae7e866205ed68f1bec59da6f672691710103e"
+  dependencies:
+    cli ">= 0.2.8"
+    eco ">= 1.1.0-rc-3"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
