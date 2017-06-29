@@ -3,13 +3,15 @@ import configureStore from './CreateStore'
 import rootSaga from '../Sagas/'
 import GitReducer from './gitReducer';
 import ActiveRepo from './activeReducer';
+import DrawerReducer from './drawerReducer';
+
 // Navigation
 import { NavigatorTabOne } from '../Navigation/Tabs/tabOne/navigationConfiguration';
 import { NavigatorTabTwo } from '../Navigation/Tabs/tabTwo/navigationConfiguration';
 import { NavigatorTabThree } from '../Navigation/Tabs/tabThree/navigationConfiguration';
 import { NavigatorTabFour } from '../Navigation/Tabs/tabFour/navigationConfiguration';
 import { NavigatorTabFive } from '../Navigation/Tabs/tabFive/navigationConfiguration';
-import { Drawer } from '../Navigation/navigationConfiguration';
+//import { Drawer } from '../Navigation/navigationConfiguration';
 
 
 export default () => {
@@ -22,15 +24,16 @@ export default () => {
     search: require('./SearchRedux').reducer,
     repos: GitReducer,
     activeRepo: ActiveRepo,
+    drawer: DrawerReducer,
 //     {
 //   const newState = TabBar.router.getStateForAction(action, state);
 //   return newState || state;
 // };
  // TabBar.router.getStateForAction(action, state),
-    drawer: (state, action) => {
-      const newState = Drawer.router.getStateForAction(action, state);
-      return newState || state;
-    },
+    // drawer: (state, action) => {
+    //   const newState = Drawer.router.getStateForAction(action, state);
+    //   return newState || state;
+    // },
     tabOne: (state, action) => NavigatorTabOne.router.getStateForAction(action, state),
     tabTwo: (state, action) => NavigatorTabTwo.router.getStateForAction(action, state),
     tabThree: (state, action) => NavigatorTabThree.router.getStateForAction(action, state),

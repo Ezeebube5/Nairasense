@@ -1,11 +1,13 @@
+//@flow
+
 import React from 'react';
 import { Container, Content, Body, Text, List, ListItem } from 'native-base';
 import { connect } from 'react-redux';
-import { View, ActivityIndicator, Image, Button } from 'react-native';
+import { View, ActivityIndicator, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Colors } from '../../../../Themes';
 import { bindActionCreators } from 'redux';
-import { getRepos, getRepoThunk, repoSelected } from '../../../../Redux/actions/index';
+import { getRepos, getRepoThunk, repoSelected, toggleDrawer } from '../../../../Redux/actions/index';
 
 const styles = {
   spinnerStyle: {
@@ -18,19 +20,28 @@ const styles = {
     flex: 1,
     width: null,
   },
+  icon: {
+    color: 'white',
+    paddingLeft: 12,
+  },
 };
 
 class TabTwoScreenOne extends React.Component {
-  static navigationOptions = {
+ static navigationOptions = {
   headerTitle: 'Blog',
   headerTintColor: Colors.snow,
-  // headerRight:
-  //   <Button onPress={() => this.props.navigation.navigate('DrawerOpen')}>
-  //     <Icon name="list" size={30} />
-  //   </Button>,
-  headerLeft: <Button title="Menu" onPress={() =>navigate('DrawerOpen')}>
-              <Icon name="list" size={30} />
-                </Button>,
+
+  headerLeft:
+<TouchableOpacity
+  onPress= {() => {this.props.repoSelected(item);}
+}>
+  <Icon name="list"
+    size={30}
+  style={styles.icon} />
+</TouchableOpacity>,
+
+
+
   headerStyle: {
     backgroundColor: Colors.in,
   },
@@ -77,13 +88,15 @@ class TabTwoScreenOne extends React.Component {
     }
   }
 }
+
+
 function mapStateToProps(state) {
   return {
     repos: state.repos,
   };
 }
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ getRepos, getRepoThunk, repoSelected }, dispatch);
+  return bindActionCreators({ getRepos, getRepoThunk, repoSelected, toggleDrawer }, dispatch);
 }
 
 

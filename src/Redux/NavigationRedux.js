@@ -1,8 +1,9 @@
-import { NavigationActions } from 'react-navigation'
-import { PrimaryNav } from '../Navigation/AppNavigation'
+import { NavigationActions } from 'react-navigation';
+import { PrimaryNav } from '../Navigation/AppNavigation';
 
-const { navigate, reset } = NavigationActions
-const { getStateForAction } = PrimaryNav.router
+
+const { navigate, reset } = NavigationActions;
+const { getStateForAction } = PrimaryNav.router;
 
 const INITIAL_STATE = getStateForAction(
   navigate({ routeName: 'LoadingScreen' })
@@ -37,6 +38,7 @@ export function reducer (state = INITIAL_STATE, action) {
       return LOGGED_IN_STATE
     case 'AUTO_LOGIN':
       return LOGGED_IN_STATE
+
   }
   nextState = getStateForAction(action, state)
   return nextState || state

@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 
 DrawerNavigation.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  navigationState: PropTypes.object.isRequired,
+  navigationState: PropTypes.shape().isRequired,
 };
 
 export default connect(mapStateToProps)(DrawerNavigation);

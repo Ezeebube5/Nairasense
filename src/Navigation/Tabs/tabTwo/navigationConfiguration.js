@@ -18,9 +18,7 @@ const routeConfiguration = {
 // going to disable the header for now
 const tabBarConfiguration = {
   initialRouteName: 'TabTwoScreenOne',
-
-  tabBarPosition: 'top',
-
+  headerMode: 'none',
 
   tabBarOptions: {
   // tint color is passed to text and icons (if enabled) on the tab bar
@@ -29,9 +27,6 @@ const tabBarConfiguration = {
 // background color is for the tab component
     activeBackgroundColor: 'green',
     inactiveBackgroundColor: 'white',
-    indicatorStyle: {
-      backgroundColor: 'black',
-    },
     style: {
       backgroundColor: Colors.in },
   },

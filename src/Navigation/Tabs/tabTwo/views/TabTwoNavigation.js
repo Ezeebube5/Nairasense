@@ -11,7 +11,7 @@ import { NavigatorTabTwo } from '../navigationConfiguration';
 
 class TabTwoNavigation extends React.Component {
   static navigationOptions = {
-    
+
     drawerLabel: 'Blog',
     drawerIcon: ({ tintColor }) => <Icon size={20} name={'file-text'} color={tintColor} />
   }

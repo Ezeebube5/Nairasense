@@ -11,7 +11,7 @@ import { NavigatorTabThree } from '../navigationConfiguration';
 
 class TabThreeNavigation extends React.Component {
   static navigationOptions = {
-    drawerLabel: 'Take Action',
+    drawerLabel: 'Podcasts',
     drawerIcon: ({ tintColor }) => <Icon size={20} name={'bank'} color={tintColor} />
 
   }

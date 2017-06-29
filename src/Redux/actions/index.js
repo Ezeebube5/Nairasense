@@ -24,6 +24,7 @@ export function getRepoThunk() {
   };
 }
 
+
 export function getMediaThunk() {
   return function (dispatch, getState) {
     fetch('https://api.github.com/repositories')
@@ -44,4 +45,9 @@ export function repoSelected(repo) {
     type: 'Repo_Selected',
     payload: repo,
   };
+}
+
+// open drawer
+export function toggleDrawer() {
+  return { type: 'Toggle_Drawer' };
 }
