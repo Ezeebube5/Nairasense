@@ -5,8 +5,6 @@ import { Container, Content, List, ListItem, Thumbnail, Body, Separator, Right, 
 import LoginActions from '../../../../Redux/LoginRedux';
 
 class TabFiveScreenTwo extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Profile'}
   render() {
     return (
       <Container>

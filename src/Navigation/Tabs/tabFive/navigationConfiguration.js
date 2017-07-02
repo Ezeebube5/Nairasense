@@ -1,4 +1,4 @@
-import { TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 import { Colors } from '../../../Themes';
 // Screens
 import TabFiveScreenOne from './views/TabFiveScreenOne';
@@ -11,7 +11,7 @@ const routeConfiguration = {
 // going to disable the header for now
 const tabBarConfiguration = {
   initialRouteName: 'TabFiveScreenOne',
-  tabBarPosition: 'top',
+  headerMode: 'none',
 
 
   tabBarOptions: {
@@ -28,4 +28,4 @@ const tabBarConfiguration = {
       backgroundColor: Colors.in },
   },
 };
-export const NavigatorTabFive = TabNavigator(routeConfiguration, tabBarConfiguration);
+export const NavigatorTabFive = StackNavigator(routeConfiguration, tabBarConfiguration);

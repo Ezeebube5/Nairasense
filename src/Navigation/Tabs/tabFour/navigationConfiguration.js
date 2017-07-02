@@ -1,4 +1,4 @@
-import { TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 import { Colors } from '../../../Themes';
 // Screens
 import TabFourScreenOne from './views/TabFourScreenOne';
@@ -11,9 +11,7 @@ const routeConfiguration = {
 // going to disable the header for now
 const tabBarConfiguration = {
   initialRouteName: 'TabFourScreenOne',
-
-  tabBarPosition: 'top',
-
+  headerMode: 'none',
 
   tabBarOptions: {
   // tint color is passed to text and icons (if enabled) on the tab bar
@@ -29,4 +27,4 @@ const tabBarConfiguration = {
       backgroundColor: Colors.in },
   },
 };
-export const NavigatorTabFour = TabNavigator(routeConfiguration, tabBarConfiguration);
+export const NavigatorTabFour = StackNavigator(routeConfiguration, tabBarConfiguration);

@@ -29,7 +29,7 @@ export function getMediaThunk() {
   return function (dispatch, getState) {
     fetch('https://api.github.com/repositories')
     .then(e => e.json())
-      .then(function (response) {
+      .then((response) => {
         console.log(response);
         const arr = response.slice(0, 10);
         // remove slice
@@ -50,4 +50,9 @@ export function repoSelected(repo) {
 // open drawer
 export function toggleDrawer() {
   return { type: 'Toggle_Drawer' };
+}
+
+export function openPage(page) {
+  return { type: 'Open_Page',
+    payload: page };
 }

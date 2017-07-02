@@ -7,13 +7,13 @@ import styles from './Styles/NavigationStyles'
 export default StackNavigator({
   LoginScreen: {
     screen: LoginScreen,
-    navigationOptions: { title: 'Login' }
-  }
+    navigationOptions: { title: 'Login' },
+  },
 }, {
   // Default config for all screens
   headerMode: 'none',
   initialRouteName: 'LoginScreen',
   navigationOptions: {
-    headerStyle: styles.header
-  }
-})
+    headerStyle: styles.header,
+  },
+});

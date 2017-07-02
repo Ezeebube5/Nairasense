@@ -39,7 +39,7 @@ export const failure = (state, { error }) =>
 export const logout = (state) => INITIAL_STATE
 
 // startup saga invoked autoLogin
-export const autoLogin = (state) => state
+export const autoLogin = state => state;
 
 /* ------------- Hookup Reducers To Types ------------- */
 
@@ -48,10 +48,10 @@ export const reducer = createReducer(INITIAL_STATE, {
   [Types.LOGIN_SUCCESS]: success,
   [Types.LOGIN_FAILURE]: failure,
   [Types.LOGOUT]: logout,
-  [Types.AUTO_LOGIN]: autoLogin
-})
+  [Types.AUTO_LOGIN]: autoLogin,
+});
 
 /* ------------- Selectors ------------- */
 
 // Is the current user logged in?
-export const isLoggedIn = (loginState) => loginState.username !== null
+export const isLoggedIn = loginState => loginState.username !== null;
